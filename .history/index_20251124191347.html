@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borderless Deviant</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Borderless Deviant</h1>
+        <p class="tagline">Rohdaten aus 700 Notizen. Systemkritik. ADHS. Lobbyismus. Games. Existenzielles.</p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html" class="active">Start</a>
+        <a href="strom.html">Strom</a>
+        <a href="themen.html">Themen</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Was ist das hier?</h2>
+            <p>
+                Eine Sammlung von Gedanken, Analysen und Beobachtungen. 
+                Kein Redaktionsplan. Kein Post-Zwang. Nur Struktur für's eigene Denken.
+            </p>
+            <p>
+                Von Lobbynetzwerken über ADHS-Bewältigungsstrategien bis hin zu 
+                Vibe-Coding und retro Games – alles was Raum braucht.
+            </p>
+        </section>
+
+        <section class="recent-posts">
+            <h2>Neueste Einträge</h2>
+            <div id="recent-posts-list">
+                <!-- Wird von JavaScript gefüllt -->
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <div class="link-box">
+                <h3>→ Strom</h3>
+                <p>Chronologisch. Neuestes zuerst. Einfach durchscrollen.</p>
+            </div>
+            <div class="link-box">
+                <h3>→ Themen</h3>
+                <p>Nach Interessensgebieten geclustert. Mit Hashtag-Filter.</p>
+            </div>
+            <div class="link-box">
+                <h3>→ About</h3>
+                <p>Wer schreibt hier und warum?</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+        <p>Gehostet auf <a href="https://neocities.org">NeoCities</a></p>
+    </footer>
+
+    <script src="js/posts.js"></script>
+    <script>
+        // Zeige die 3 neuesten Posts auf der Startseite
+        loadRecentPosts(3, 'recent-posts-list');
+    </script>
+</body>
+</html>

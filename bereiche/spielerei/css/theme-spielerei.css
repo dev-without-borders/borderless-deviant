@@ -1,0 +1,78 @@
+/* ========================================
+   THEME: SPIELEREI
+   Gaming, Retro, Pixelkunst
+   ======================================== */
+
+.theme-spielerei {
+    --color-bg: #1a1a2e;
+    --color-text: #eaeaea;
+    --color-accent: #ff6b6b;
+    --color-secondary: #4ecdc4;
+    --color-muted: #a0a0a0;
+    --color-border: #333;
+    
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+.theme-spielerei a {
+    color: var(--color-accent);
+}
+
+.theme-spielerei .site-header {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.theme-spielerei .main-nav {
+    background: #16213e;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.theme-spielerei .main-nav a.active {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+.theme-spielerei .bereich-intro {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-accent);
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+}
+
+.theme-spielerei .static-post {
+    background: #16213e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid var(--color-accent);
+    transition: all 0.3s;
+}
+
+.theme-spielerei .static-post:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.theme-spielerei .tag {
+    background: rgba(255, 107, 107, 0.2);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+.theme-spielerei .tag:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+.theme-spielerei h2 {
+    text-shadow: 2px 2px 0 var(--color-accent);
+}
+
+.theme-spielerei .site-footer {
+    border-top: 2px solid var(--color-accent);
+    background: #16213e;
+}

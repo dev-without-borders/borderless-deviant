@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": "beispiel-2024-01",
+      "title": "Palantir und die Privatisierung der Überwachung",
+      "date": "2024-01-15",
+      "file": "posts/2024-01-beispiel.html",
+      "tags": ["#politik", "#lobbyismus", "#palantir", "#überwachung"],
+      "theme": "politik",
+      "excerpt": "Wie ein Silicon-Valley-Unternehmen zum zentralen Player staatlicher Überwachungsinfrastruktur wurde – und warum das ein Problem ist."
+    },
+    {
+      "id": "vibe-coding-intro",
+      "title": "Vibe Coding: Programmieren nach Gefühl",
+      "date": "2024-01-10",
+      "file": "posts/2024-01-vibe-coding.html",
+      "tags": ["#coding", "#ki", "#workflow", "#adhs"],
+      "theme": "wissen",
+      "excerpt": "Warum strukturiertes Planen manchmal der Feind von Flow ist – und wie KI dabei hilft, intuitiv zu coden."
+    },
+    {
+      "id": "containern-deutschland",
+      "title": "Containern in Deutschland: Illegal aus Prinzip",
+      "date": "2024-01-05",
+      "file": "posts/2024-01-containern.html",
+      "tags": ["#politik", "#gesellschaft", "#verschwendung"],
+      "theme": "politik",
+      "excerpt": "Über die absurde Rechtslage beim Retten von Lebensmitteln aus dem Müll."
+    }
+  ],
+  "themes": {
+    "politik": {
+      "name": "Politik & Weltschmerz",
+      "description": "Systemkritik, Lobbyismus, gesellschaftliche Missstände"
+    },
+    "wissen": {
+      "name": "Wissen & Lernen",
+      "description": "KI, Coding, Workflows, Prompten"
+    },
+    "kultur": {
+      "name": "Unterhaltung & Kultur",
+      "description": "Games, Retro-Tech, geile Sachen mit KI"
+    },
+    "philosophie": {
+      "name": "Düt & Dat",
+      "description": "Existenzielles, Baustellen, Arbeitsmoral"
+    }
+  }
+}

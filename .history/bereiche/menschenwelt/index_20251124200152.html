@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menschenwelt - Borderless Deviant</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="css/theme-menschenwelt.css">
+</head>
+<body class="theme-menschenwelt">
+    <header class="site-header">
+        <h1><a href="../../index.html">Borderless Deviant</a></h1>
+        <p class="bereich-breadcrumb">
+            <a href="../../wilde-reise.html">Wilde Reise</a> → Menschenwelt
+        </p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="../../index.html">Start</a>
+        <a href="../../strom.html">Strom</a>
+        <a href="../../themen.html">Themen</a>
+        <a href="../../wilde-reise.html" class="active">Wilde Reise</a>
+        <a href="../../about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="bereich-intro">
+            <h2>⚡ Menschenwelt</h2>
+            <p>
+                Lobbyismus, Systemdenken, strukturelle Gewalt. 
+                Das Unbequeme. Das Notwendige. Das Verdrängte.
+            </p>
+            <div class="bereich-tags">
+                <a href="../../themen.html?tag=%23lobbyismus" class="tag">#lobbyismus</a>
+                <a href="../../themen.html?tag=%23systemkritik" class="tag">#systemkritik</a>
+                <a href="../../themen.html?tag=%23macht" class="tag">#macht</a>
+                <a href="../../themen.html?tag=%23systemdenken" class="tag">#systemdenken</a>
+            </div>
+        </section>
+
+        <section class="bereich-content">
+            <article class="static-post">
+                <h3><a href="lobbyismus.html">Lobbyismus: Die unsichtbare Macht</a></h3>
+                <p>
+                    Wie Interessensgruppen Politik gestalten. Von Palantir bis 
+                    Weimar Medien Group. Eine Spurensuche.
+                </p>
+                <div class="post-tags">
+                    <span class="tag" data-tag="#lobbyismus">#lobbyismus</span>
+                    <span class="tag" data-tag="#politik">#politik</span>
+                    <span class="tag" data-tag="#transparenz">#transparenz</span>
+                </div>
+            </article>
+
+            <article class="static-post">
+                <h3><a href="systemdenken.html">Systemdenken: Strukturen statt Symptome</a></h3>
+                <p>
+                    Warum individuelle Lösungen für strukturelle Probleme nicht funktionieren. 
+                    Und was das mit Kapitalismuskritik zu tun hat.
+                </p>
+                <div class="post-tags">
+                    <span class="tag" data-tag="#systemdenken">#systemdenken</span>
+                    <span class="tag" data-tag="#systemkritik">#systemkritik</span>
+                    <span class="tag" data-tag="#struktur">#struktur</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="related-from-blog">
+            <h3>Verwandte Blog-Posts</h3>
+            <div id="related-blog-posts">
+                <!-- Wird von JavaScript gefüllt -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="../../js/posts.js"></script>
+    <script src="../../js/x-site-tags.js"></script>
+    <script>
+        loadRelatedPosts(['#lobbyismus', '#systemkritik', '#systemdenken', '#macht'], 'related-blog-posts');
+        initCrossSiteTags();
+    </script>
+</body>
+</html>

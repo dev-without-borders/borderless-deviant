@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strom - Borderless Deviant</title>
+    <link rel="stylesheet" href="/css/themes/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1><a href="index.html">Borderless Deviant</a></h1>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html">Start</a>
+        <a href="strom.html" class="active">Strom</a>
+        <a href="themen.html">Themen</a>
+        <a href="wilde-reise.html">Wilde Reise</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Strom</h2>
+            <p>Chronologischer Feed. Neuestes zuerst. Ungefiltert.</p>
+        </section>
+
+        <div class="filter-controls">
+            <label>
+                <input type="checkbox" id="filter-toggle" />
+                Nach Thema filtern
+            </label>
+            <div id="theme-filters" style="display: none;">
+                <!-- Wird von JavaScript gefüllt -->
+            </div>
+        </div>
+
+        <div id="posts-stream">
+            <!-- Wird von JavaScript gefüllt -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="js/posts.js"></script>
+    <script src="js/hashtags.js"></script>
+    <script>
+        loadAllPosts('posts-stream');
+        
+        document.getElementById('filter-toggle').addEventListener('change', (e) => {
+            document.getElementById('theme-filters').style.display = 
+                e.target.checked ? 'block' : 'none';
+        });
+    </script>
+        <script src="js/theme-toggle.js"></script> <!-- NEU -->
+</body>
+</html>

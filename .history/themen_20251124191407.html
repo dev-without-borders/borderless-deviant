@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themen - Borderless Deviant</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1><a href="index.html">Borderless Deviant</a></h1>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html">Start</a>
+        <a href="strom.html">Strom</a>
+        <a href="themen.html" class="active">Themen</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Themen</h2>
+            <p>Nach Interessensgebieten geclustert. Klick auf Tags zum Filtern.</p>
+        </section>
+
+        <div class="theme-clusters" id="theme-clusters">
+            <!-- Wird von JavaScript gefüllt -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="js/posts.js"></script>
+    <script src="js/hashtags.js"></script>
+    <script>
+        loadThemeClusters('theme-clusters');
+    </script>
+</body>
+</html>

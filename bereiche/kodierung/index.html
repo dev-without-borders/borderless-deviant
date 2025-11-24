@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodierung - Borderless Deviant</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="css/theme-kodierung.css">
+</head>
+<body class="theme-kodierung">
+    <header class="site-header">
+        <h1><a href="../../index.html">Borderless Deviant</a></h1>
+        <p class="bereich-breadcrumb">
+            <a href="../../wilde-reise.html">Wilde Reise</a> → Kodierung
+        </p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="../../index.html">Start</a>
+        <a href="../../strom.html">Strom</a>
+        <a href="../../themen.html">Themen</a>
+        <a href="../../wilde-reise.html" class="active">Wilde Reise</a>
+        <a href="../../about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="bereich-intro">
+            <h2>💻 Kodierung</h2>
+            <p>
+                Vibe-Coding, KI-Workflows, GitHub-Experimente. 
+                Programmieren als Denken. Code als Ausdruck.
+            </p>
+            <div class="bereich-tags">
+                <a href="../../themen.html?tag=%23vibecoding" class="tag">#vibecoding</a>
+                <a href="../../themen.html?tag=%23ki" class="tag">#ki</a>
+                <a href="../../themen.html?tag=%23github" class="tag">#github</a>
+                <a href="../../themen.html?tag=%23workflow" class="tag">#workflow</a>
+            </div>
+        </section>
+
+        <section class="bereich-content">
+            <article class="static-post">
+                <h3><a href="ki-tools.html">KI-Tools: Meine täglichen Begleiter</a></h3>
+                <p>
+                    Von Claude bis Cursor. Welche KI-Tools ich wofür nutze und warum 
+                    Vibe-Coding mehr ist als "lass die KI machen".
+                </p>
+                <div class="post-tags">
+                    <span class="tag" data-tag="#ki">#ki</span>
+                    <span class="tag" data-tag="#tools">#tools</span>
+                    <span class="tag" data-tag="#vibecoding">#vibecoding</span>
+                </div>
+            </article>
+
+            <article class="static-post">
+                <h3><a href="github.html">GitHub als Gedächtnis</a></h3>
+                <p>
+                    Warum ich anfing, meine Projekte zu versionieren und was das 
+                    mit ADHS zu tun hat.
+                </p>
+                <div class="post-tags">
+                    <span class="tag" data-tag="#github">#github</span>
+                    <span class="tag" data-tag="#versionskontrolle">#versionskontrolle</span>
+                    <span class="tag" data-tag="#adhs">#adhs</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="related-from-blog">
+            <h3>Verwandte Blog-Posts</h3>
+            <div id="related-blog-posts">
+                <!-- Wird von JavaScript gefüllt -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="../../js/posts.js"></script>
+    <script src="../../js/x-site-tags.js"></script>
+    <script>
+        loadRelatedPosts(['#vibecoding', '#ki', '#github', '#workflow'], 'related-blog-posts');
+        initCrossSiteTags();
+    </script>
+</body>
+</html>

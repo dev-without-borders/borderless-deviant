@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strom - Borderless Deviant</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1><a href="index.html">Borderless Deviant</a></h1>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html">Start</a>
+        <a href="strom.html" class="active">Strom</a>
+        <a href="themen.html">Themen</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Strom</h2>
+            <p>Alle Einträge chronologisch. Neueste zuerst.</p>
+        </section>
+
+        <aside class="filter-bar">
+            <label for="tag-filter">Filter nach Tag:</label>
+            <select id="tag-filter">
+                <option value="">Alle anzeigen</option>
+                <!-- Wird dynamisch gefüllt -->
+            </select>
+        </aside>
+
+        <section class="posts-list" id="posts-list">
+            <!-- Wird von JavaScript gefüllt -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="js/posts.js"></script>
+    <script src="js/hashtags.js"></script>
+    <script>
+        loadAllPosts('posts-list');
+        populateTagFilter('tag-filter');
+        
+        document.getElementById('tag-filter').addEventListener('change', (e) => {
+            filterPostsByTag(e.target.value, 'posts-list');
+        });
+    </script>
+</body>
+</html>

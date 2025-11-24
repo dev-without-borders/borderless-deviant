@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geistesblitze - Borderless Deviant</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="css/theme-geistesblitze.css">
+</head>
+<body class="theme-geistesblitze">
+    <header class="site-header">
+        <h1><a href="../../index.html">Borderless Deviant</a></h1>
+        <p class="bereich-breadcrumb">
+            <a href="../../wilde-reise.html">Wilde Reise</a> → Geistesblitze
+        </p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="../../index.html">Start</a>
+        <a href="../../strom.html">Strom</a>
+        <a href="../../themen.html">Themen</a>
+        <a href="../../wilde-reise.html" class="active">Wilde Reise</a>
+        <a href="../../about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="bereich-intro">
+            <h2>💡 Geistesblitze</h2>
+            <p>
+                Halbfertige Projekte, Gedankenexperimente, Ideen mit Potential. 
+                Der Raum zwischen "müsste man mal" und "hab ich gemacht".
+            </p>
+            <div class="bereich-tags">
+                <a href="../../themen.html?tag=%23ideen" class="tag">#ideen</a>
+                <a href="../../themen.html?tag=%23konzepte" class="tag">#konzepte</a>
+                <a href="../../themen.html?tag=%23brainstorm" class="tag">#brainstorm</a>
+            </div>
+        </section>
+
+        <section class="bereich-content">
+            <article class="static-post">
+                <h3><a href="ideen.html">Ideensammlung: Die Liste</a></h3>
+                <p>
+                    Projekte, die ich gerne machen würde. Manche realistisch, 
+                    manche utopisch. Alle interessant.
+                </p>
+                <div class="post-tags">
+                    <span class="tag" data-tag="#ideen">#ideen</span>
+                    <span class="tag" data-tag="#projekte">#projekte</span>
+                    <span class="tag" data-tag="#vision">#vision</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="related-from-blog">
+            <h3>Verwandte Blog-Posts</h3>
+            <div id="related-blog-posts">
+                <!-- Wird von JavaScript gefüllt -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="../../js/posts.js"></script>
+    <script src="../../js/x-site-tags.js"></script>
+    <script>
+        loadRelatedPosts(['#ideen', '#konzepte', '#brainstorm'], 'related-blog-posts');
+        initCrossSiteTags();
+    </script>
+</body>
+</html>

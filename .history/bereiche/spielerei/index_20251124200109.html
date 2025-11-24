@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielerei - Borderless Deviant</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="css/theme-spielerei.css">
+</head>
+<body class="theme-spielerei">
+    <header class="site-header">
+        <h1><a href="../../index.html">Borderless Deviant</a></h1>
+        <p class="bereich-breadcrumb">
+            <a href="../../wilde-reise.html">Wilde Reise</a> → Spielerei
+        </p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="../../index.html">Start</a>
+        <a href="../../strom.html">Strom</a>
+        <a href="../../themen.html">Themen</a>
+        <a href="../../wilde-reise.html" class="active">Wilde Reise</a>
+        <a href="../../about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="bereich-intro">
+            <h2>🎮 Spielerei</h2>
+            <p>
+                Von Retro-Hardware bis moderne Indies. Gaming als Kunstform, 
+                Spiel als Ernst. Pixel als Philosophie.
+            </p>
+            <div class="bereich-tags">
+                <a href="../../themen.html?tag=%23retrokram" class="tag">#retrokram</a>
+                <a href="../../themen.html?tag=%23gaming" class="tag">#gaming</a>
+                <a href="../../themen.html?tag=%23spielundkunst" class="tag">#spielundkunst</a>
+                <a href="../../themen.html?tag=%23emulation" class="tag">#emulation</a>
+            </div>
+        </section>
+
+        <section class="bereich-content">
+            <article class="static-post">
+                <h3><a href="retrokram.html">Retrokram: CRT, FPGA & Authentizität</a></h3>
+                <p>
+                    Von CRT-Monitoren bis FPGA-Hardware. Wie ich versuche, authentisches 
+                    Retro-Feeling mit moderner Convenience zu verbinden.
+                </p>
+                <div class="post-tags">
+                    <span class="tag" data-tag="#retrokram">#retrokram</span>
+                    <span class="tag" data-tag="#hardware">#hardware</span>
+                    <span class="tag" data-tag="#crt">#crt</span>
+                </div>
+            </article>
+
+            <article class="static-post">
+                <h3><a href="spielundkunst.html">Spiel und Kunst: Wo ist die Grenze?</a></h3>
+                <p>
+                    Games als künstlerisches Medium. Von Walking Simulators bis 
+                    experimentellen Indie-Perlen.
+                </p>
+                <div class="post-tags">
+                    <span class="tag" data-tag="#spielundkunst">#spielundkunst</span>
+                    <span class="tag" data-tag="#indie">#indie</span>
+                    <span class="tag" data-tag="#kunst">#kunst</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="related-from-blog">
+            <h3>Verwandte Blog-Posts</h3>
+            <div id="related-blog-posts">
+                <!-- Wird von JavaScript gefüllt -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="../../js/posts.js"></script>
+    <script src="../../js/x-site-tags.js"></script>
+    <script>
+        loadRelatedPosts(['#retrokram', '#gaming', '#spielundkunst'], 'related-blog-posts');
+        initCrossSiteTags();
+    </script>
+</body>
+</html>

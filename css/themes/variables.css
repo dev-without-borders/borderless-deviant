@@ -1,0 +1,62 @@
+/* ========================================
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   ======================================== */
+
+:root {
+    /* === LIGHT MODE (Default) === */
+    --color-bg: #ffffff;
+    --color-bg-light: #f5f5f5;
+    --color-text: #2c3e50;
+    --color-text-muted: #7f8c8d;
+    --color-border: #ddd;
+    --color-accent: #3498db;
+    --color-accent-hover: #2980b9;
+    --color-link: #3498db;
+    --color-link-hover: #2980b9;
+    
+    /* Schatten */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    
+    /* Typography */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-serif: Georgia, "Times New Roman", serif;
+    --font-mono: "Courier New", Courier, monospace;
+    
+    /* Layout */
+    --container-width: 1200px;
+    --content-width: 800px;
+}
+
+/* === DARK MODE === */
+[data-theme="dark"] {
+    --color-bg: #1a1a1a;
+    --color-bg-light: #2d2d2d;
+    --color-text: #e0e0e0;
+    --color-text-muted: #a0a0a0;
+    --color-border: #404040;
+    --color-accent: #64b5f6;
+    --color-accent-hover: #42a5f5;
+    --color-link: #64b5f6;
+    --color-link-hover: #90caf9;
+    
+    /* Dark Mode Schatten */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.4);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Theme-spezifische Farben (unabhängig von Dark/Light) */
+.theme-politik { background-color: #e74c3c; color: white; }
+.theme-tech { background-color: #3498db; color: white; }
+.theme-adhd { background-color: #9b59b6; color: white; }
+.theme-kultur { background-color: #1abc9c; color: white; }
+.theme-meta { background-color: #95a5a6; color: white; }

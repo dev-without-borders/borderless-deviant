@@ -1,0 +1,60 @@
+{
+  "staticPages": [
+    {
+      "id": "spielerei-retrokram",
+      "title": "Retrokram: CRT, FPGA & Authentizität",
+      "url": "bereiche/spielerei/retrokram.html",
+      "bereich": "spielerei",
+      "tags": ["#retrokram", "#hardware", "#crt", "#emulation"],
+      "excerpt": "Von CRT-Monitoren bis FPGA-Hardware. Authentisches Retro-Feeling mit moderner Convenience."
+    },
+    {
+      "id": "spielerei-spielundkunst",
+      "title": "Spiel und Kunst: Wo ist die Grenze?",
+      "url": "bereiche/spielerei/spielundkunst.html",
+      "bereich": "spielerei",
+      "tags": ["#spielundkunst", "#indie", "#kunst", "#gaming"],
+      "excerpt": "Games als künstlerisches Medium. Von Walking Simulators bis experimentellen Indie-Perlen."
+    },
+    {
+      "id": "kodierung-ki-tools",
+      "title": "KI-Tools: Meine täglichen Begleiter",
+      "url": "bereiche/kodierung/ki-tools.html",
+      "bereich": "kodierung",
+      "tags": ["#ki", "#tools", "#vibecoding", "#workflow"],
+      "excerpt": "Von Claude bis Cursor. Welche KI-Tools ich wofür nutze."
+    },
+    {
+      "id": "kodierung-github",
+      "title": "GitHub als Gedächtnis",
+      "url": "bereiche/kodierung/github.html",
+      "bereich": "kodierung",
+      "tags": ["#github", "#versionskontrolle", "#adhs", "#workflow"],
+      "excerpt": "Warum ich anfing, meine Projekte zu versionieren und was das mit ADHS zu tun hat."
+    },
+    {
+      "id": "geistesblitze-ideen",
+      "title": "Ideensammlung: Die Liste",
+      "url": "bereiche/geistesblitze/ideen.html",
+      "bereich": "geistesblitze",
+      "tags": ["#ideen", "#projekte", "#vision", "#brainstorm"],
+      "excerpt": "Projekte, die ich gerne machen würde. Manche realistisch, manche utopisch."
+    },
+    {
+      "id": "menschenwelt-lobbyismus",
+      "title": "Lobbyismus: Die unsichtbare Macht",
+      "url": "bereiche/menschenwelt/lobbyismus.html",
+      "bereich": "menschenwelt",
+      "tags": ["#lobbyismus", "#politik", "#transparenz", "#macht"],
+      "excerpt": "Wie Interessensgruppen Politik gestalten. Von Palantir bis Weimar Medien Group."
+    },
+    {
+      "id": "menschenwelt-systemdenken",
+      "title": "Systemdenken: Strukturen statt Symptome",
+      "url": "bereiche/menschenwelt/systemdenken.html",
+      "bereich": "menschenwelt",
+      "tags": ["#systemdenken", "#systemkritik", "#struktur", "#gesellschaft"],
+      "excerpt": "Warum individuelle Lösungen für strukturelle Probleme nicht funktionieren."
+    }
+  ]
+}

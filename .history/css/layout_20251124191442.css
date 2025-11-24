@@ -1,0 +1,205 @@
+/* ========================================
+   INTRO SECTION (Index)
+   ======================================== */
+
+.intro {
+    margin-bottom: var(--space-lg);
+}
+
+/* ========================================
+   QUICK LINKS (Index)
+   ======================================== */
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.link-box {
+    padding: var(--space-md);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.link-box:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+}
+
+.link-box h3 {
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+}
+
+/* ========================================
+   POST PREVIEW CARD
+   ======================================== */
+
+.post-card {
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: box-shadow 0.2s;
+}
+
+.post-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-card h3 {
+    margin-bottom: var(--space-xs);
+}
+
+.post-card h3 a {
+    color: var(--color-text);
+}
+
+.post-card h3 a:hover {
+    color: var(--color-accent);
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.post-excerpt {
+    margin-bottom: var(--space-sm);
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    background: #f0f0f0;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.tag:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+/* ========================================
+   FILTER BAR (Strom)
+   ======================================== */
+
+.filter-bar {
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm);
+    background: #f9f9f9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.filter-bar select {
+    padding: 0.5em 1em;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+/* ========================================
+   THEME CLUSTERS (Themen)
+   ======================================== */
+
+.theme-cluster {
+    margin-bottom: var(--space-lg);
+}
+
+.theme-cluster h3 {
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.cluster-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.cluster-tag {
+    padding: 0.5em 1em;
+    background: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cluster-tag:hover {
+    background: var(--color-accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.cluster-tag .count {
+    font-size: 0.85em;
+    color: var(--color-muted);
+}
+
+.cluster-tag:hover .count {
+    color: rgba(255,255,255,0.8);
+}
+
+/* ========================================
+   POST ARTICLE (Einzelartikel)
+   ======================================== */
+
+.post-article {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.post-header {
+    margin-bottom: var(--space-md);
+}
+
+.post-header h1 {
+    margin-bottom: var(--space-xs);
+}
+
+.post-content {
+    margin-bottom: var(--space-lg);
+}
+
+.post-content h2 {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.post-content h3 {
+    margin-top: var(--space-sm);
+}
+
+.post-footer {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+}
+
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+
+.about-content section {
+    margin-bottom: var(--space-lg);
+}

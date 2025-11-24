@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themen - Borderless Deviant</title>
+    <link rel="stylesheet" href="/css/themes/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1><a href="index.html">Borderless Deviant</a></h1>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html">Start</a>
+        <a href="strom.html">Strom</a>
+        <a href="themen.html" class="active">Themen</a>
+        <a href="wilde-reise.html">Wilde Reise</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Themen</h2>
+            <p>Durchsuche alle Inhalte nach Hashtags - quer durch Blog und Themenseiten.</p>
+        </section>
+
+        <div class="tag-search-bar">
+            <input 
+                type="text" 
+                id="tag-search" 
+                placeholder="Nach Tag suchen (z.B. #lobbyismus)..."
+                autocomplete="off"
+            >
+            <div id="tag-suggestions"></div>
+        </div>
+
+        <div id="tag-results">
+            <!-- Wird gefüllt bei Tag-Auswahl -->
+        </div>
+
+        <div id="all-tags-overview" class="theme-clusters">
+            <!-- Zeigt alle verfügbaren Tags wenn kein Filter aktiv -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
+    </footer>
+
+    <script src="js/posts.js"></script>
+    <script src="js/hashtags.js"></script>
+    <script src="js/x-site-tags.js"></script>
+    <script>
+        const urlTag = getUrlParameter('tag');
+        
+        if (urlTag) {
+            document.getElementById('tag-search').value = urlTag;
+            document.getElementById('all-tags-overview').style.display = 'none';
+            showTagResults(urlTag, 'tag-results');
+        } else {
+            loadThemeClusters('all-tags-overview');
+        }
+        
+        document.getElementById('tag-search').addEventListener('input', async (e) => {
+            const query = e.target.value.trim();
+            
+            if (query.length === 0) {
+                document.getElementById('tag-results').innerHTML = '';
+                document.getElementById('all-tags-overview').style.display = 'block';
+                return;
+            }
+            
+            if (query.startsWith('#')) {
+                document.getElementById('all-tags-overview').style.display = 'none';
+                showTagResults(query, 'tag-results');
+            }
+        });
+    </script>
+        <script src="js/theme-toggle.js"></script> <!-- NEU -->
+</body>
+</html>
