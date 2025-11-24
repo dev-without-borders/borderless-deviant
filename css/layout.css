@@ -1,271 +1,274 @@
 /* ========================================
-   WILDE REISE - Bereich-Grid
+   LAYOUT.CSS - Für deine bestehende HTML-Struktur
    ======================================== */
 
-.bereich-grid {
+/* ========================================
+   CONTAINER
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+main.container {
+    min-height: calc(100vh - 200px);
+    padding: var(--space-lg) var(--space-md);
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.site-header {
+    background: var(--color-bg-light);
+    border-bottom: 2px solid var(--color-border);
+    padding: var(--space-lg) var(--space-md);
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--color-text);
+}
+
+.tagline {
+    color: var(--color-muted);
+    margin-top: 0.5em;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    background: var(--color-bg-light);
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.6em 1.2em;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+.main-nav a.active {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+section {
+    margin-bottom: var(--space-xl);
+}
+
+.intro {
+    background: var(--color-bg-light);
+    border-left: 4px solid var(--color-accent);
+    padding: var(--space-md);
+    border-radius: 4px;
+}
+
+.intro h2 {
+    margin-top: 0;
+}
+
+/* ========================================
+   RECENT POSTS
+   ======================================== */
+
+.recent-posts h2 {
+    margin-bottom: var(--space-md);
+}
+
+#recent-posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+/* Post Cards (werden von JavaScript erstellt) */
+.post-card {
+    background: var(--color-bg-light);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-md);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post-card .post-category {
+    display: inline-block;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 0.3em 0.8em;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: var(--space-sm);
+    align-self: flex-start;
+}
+
+.post-card h3 {
+    margin: 0 0 var(--space-sm) 0;
+    font-size: 1.3rem;
+}
+
+.post-card h3 a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.post-card h3 a:hover {
+    color: var(--color-accent);
+}
+
+.post-card .post-meta {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+}
+
+.post-card .post-excerpt {
+    color: var(--color-muted);
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* ========================================
+   QUICK LINKS (deine .link-box)
+   ======================================== */
+
+.quick-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-md);
     margin-top: var(--space-lg);
 }
 
-.bereich-card {
-    display: block;
-    padding: var(--space-md);
-    border: 2px solid var(--color-border);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--color-text);
-    transition: all 0.3s;
-}
-
-.bereich-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    text-decoration: none;
-}
-
-.bereich-card h3 {
-    margin-bottom: var(--space-xs);
-}
-
-.bereich-card p {
-    color: var(--color-muted);
-    font-size: 0.9rem;
-    margin-bottom: var(--space-sm);
-}
-
-.tag-preview {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--color-accent);
-    font-family: var(--font-mono);
-}
-
-/* Individuelle Bereich-Farben */
-.bereich-spielerei { border-left: 4px solid #ff6b6b; }
-.bereich-kodierung { border-left: 4px solid #58a6ff; }
-.bereich-geistesblitze { border-left: 4px solid #ffe66d; }
-.bereich-menschenwelt { border-left: 4px solid #d32f2f; }
-
-/* ========================================
-   BEREICH-SEITEN
-   ======================================== */
-
-.bereich-breadcrumb {
-    font-size: 0.9rem;
-    color: var(--color-muted);
-    margin-top: var(--space-xs);
-}
-
-.bereich-intro {
-    background: #f9f9f9;
-    padding: var(--space-md);
-    border-radius: 8px;
-    border-left: 4px solid var(--color-accent);
-    margin-bottom: var(--space-lg);
-}
-
-.bereich-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-    margin-top: var(--space-sm);
-}
-
-.static-post {
-    margin-bottom: var(--space-md);
-    padding: var(--space-md);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-}
-
-.related-from-blog {
-    margin-top: var(--space-lg);
-    padding-top: var(--space-lg);
-    border-top: 2px solid var(--color-border);
-}
-
-/* ========================================
-   TAG-SUCHE (Themen-Seite)
-   ======================================== */
-
-.tag-search-bar {
-    position: relative;
-    margin-bottom: var(--space-lg);
-}
-
-.tag-search-bar input {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    border: 2px solid var(--color-border);
-    border-radius: 8px;
-    font-family: var(--font-mono);
-}
-
-.tag-search-bar input:focus {
-    outline: none;
-    border-color: var(--color-accent);
-}
-
-.results-section {
-    margin-bottom: var(--space-lg);
-}
-
-.results-section h4 {
-    margin-bottom: var(--space-md);
-    padding-bottom: var(--space-xs);
-    border-bottom: 2px solid var(--color-border);
-}
-
-.result-card {
-    margin-bottom: var(--space-md);
-    padding: var(--space-md);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-}
-
-.result-type {
-    display: inline-block;
-    font-size: 0.8rem;
-    padding: 0.2em 0.6em;
-    background: var(--color-accent);
-    color: white;
-    border-radius: 3px;
-    margin-bottom: var(--space-xs);
-}
-
-.result-card.static-page {
-    border-left: 3px solid #4ecdc4;
-}
-
-.result-card.blog-post {
-    border-left: 3px solid #ff6b6b;
-}
-
-.result-tags {
-    margin-top: var(--space-sm);
-}
-
-.no-results {
-    text-align: center;
-    padding: var(--space-lg);
-    color: var(--color-muted);
-}
-
-.count {
-    color: var(--color-muted);
-    font-size: 0.9em;
-}
-
-/* ========================================
-   KLICKBARE TAGS
-   ======================================== */
-
-.tag {
-    display: inline-block;
-    padding: 0.3em 0.6em;
-    margin: 0.2em;
+.link-box {
     background: var(--color-bg-light);
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-family: var(--font-mono);
-    transition: all 0.2s;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-md);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.clickable-tag {
-    cursor: pointer !important;
-}
-
-.clickable-tag:hover {
-    background: var(--color-accent);
-    color: white;
+.link-box:hover {
     border-color: var(--color-accent);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    background: var(--color-accent);
+    color: var(--color-bg);
 }
 
-/* Tag-Cloud auf Themen-Seite */
-.tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: var(--space-md);
+.link-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: inherit;
 }
 
-.tag-cloud-item small {
-    opacity: 0.7;
-    font-size: 0.8em;
+.link-box p {
+    margin-bottom: 0;
+    color: inherit;
+    opacity: 0.9;
 }
-
-.tag-cloud-item[data-count="1"] { font-size: 0.9rem; }
-.tag-cloud-item[data-count="2"] { font-size: 1rem; }
-.tag-cloud-item[data-count="3"] { font-size: 1.1rem; }
-.tag-cloud-item[data-count="4"],
-.tag-cloud-item[data-count="5"] { font-size: 1.2rem; }
-
 
 /* ========================================
-   DARK MODE TOGGLE
+   HASHTAGS
    ======================================== */
 
-.theme-toggle {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    border: 2px solid var(--color-border);
-    cursor: pointer;
+.hashtags {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
-    z-index: 1000;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: var(--space-sm);
 }
 
-.theme-toggle:hover {
-    transform: scale(1.1) rotate(20deg);
+.hashtag {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 0.3em 0.8em;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.hashtag:hover {
     background: var(--color-accent-hover);
+    transform: scale(1.05);
 }
 
-.theme-toggle:active {
-    transform: scale(0.95);
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+    background: var(--color-bg-light);
+    border-top: 2px solid var(--color-border);
+    padding: var(--space-lg);
+    margin-top: var(--space-xl);
+    text-align: center;
 }
 
-/* Icons */
-.theme-toggle .icon-sun,
-.theme-toggle .icon-moon {
-    display: none;
+.site-footer p {
+    color: var(--color-muted);
+    margin: 0;
 }
 
-/* Light Mode zeigt Mond */
-:root .theme-toggle .icon-moon {
-    display: block;
+.site-footer a {
+    color: var(--color-accent);
 }
 
-/* Dark Mode zeigt Sonne */
-[data-theme="dark"] .theme-toggle .icon-sun {
-    display: block;
-}
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 
-[data-theme="dark"] .theme-toggle .icon-moon {
-    display: none;
-}
-
-/* Mobile Anpassung */
 @media (max-width: 768px) {
-    .theme-toggle {
-        bottom: 1rem;
-        right: 1rem;
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
+    .site-header h1 {
+        font-size: 2rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #recent-posts-list {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
     }
 }

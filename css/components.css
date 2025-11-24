@@ -1,0 +1,210 @@
+/* ========================================
+   COMPONENTS.CSS - Buttons, Tags, Forms
+   ======================================== */
+
+/* ========================================
+   HASHTAGS / TAGS
+   ======================================== */
+
+.hashtag,
+.clickable-tag,
+.tag {
+    display: inline-block;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 0.4em 0.9em;
+    border-radius: 14px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.hashtag:hover,
+.clickable-tag:hover,
+.tag:hover {
+    background: var(--color-accent-hover);
+    transform: scale(1.05);
+}
+
+/* Tag Cloud */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    margin: var(--space-md) 0;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+button,
+.btn {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    background: transparent;
+    border: 2px solid var(--color-border);
+    padding: 0.5em;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dark-mode-toggle:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: rotate(20deg);
+}
+
+/* ========================================
+   FORM ELEMENTS
+   ======================================== */
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8em 1em;
+    border: 2px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-bg-light);
+    color: var(--color-text);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: var(--color-bg);
+}
+
+/* Search Box */
+.search-box,
+.filter-box {
+    margin-bottom: var(--space-lg);
+}
+
+.search-box input,
+.filter-box input {
+    max-width: 600px;
+}
+
+/* ========================================
+   BADGES / LABELS
+   ======================================== */
+
+.badge,
+.post-category {
+    display: inline-block;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 0.3em 0.8em;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+/* ========================================
+   ALERTS / MESSAGES
+   ======================================== */
+
+.alert {
+    padding: var(--space-md);
+    border-radius: 6px;
+    margin-bottom: var(--space-md);
+    border-left: 4px solid;
+}
+
+.alert-info {
+    background: rgba(66, 153, 225, 0.1);
+    border-color: #4299e1;
+    color: #4299e1;
+}
+
+.alert-success {
+    background: rgba(72, 187, 120, 0.1);
+    border-color: #48bb78;
+    color: #48bb78;
+}
+
+.alert-warning {
+    background: rgba(237, 137, 54, 0.1);
+    border-color: #ed8936;
+    color: #ed8936;
+}
+
+.alert-error {
+    background: rgba(245, 101, 101, 0.1);
+    border-color: #f56565;
+    color: #f56565;
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+
+.loading {
+    text-align: center;
+    padding: var(--space-lg);
+    color: var(--color-muted);
+    font-style: italic;
+}
+
+.loading::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* ========================================
+   NO RESULTS
+   ======================================== */
+
+.no-results {
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--color-muted);
+    font-style: italic;
+}
