@@ -1,0 +1,167 @@
+
+[2025-12-03T09:27:51.847Z]
+[
+  {
+    "type": "update",
+    "old": {
+      "id": "2025-12-03-karl-auer-weihnachten",
+      "date": "2025-12-03",
+      "title": "Karl-Auer Weihnachten",
+      "excerpt": "diesdas...",
+      "theme": "philosophie",
+      "tags": [
+        "tag1",
+        "tag2"
+      ],
+      "url": "posts/2025-12-03-karl-auer-weihnachten.html"
+    },
+    "new": {
+      "id": "2025-12-03-karl-auer-weihnachten",
+      "date": "2025-12-03",
+      "title": "Karl-Auer Weihnachten",
+      "excerpt": "diesdas...",
+      "theme": "philosophie",
+      "tags": [
+        "schietwetter",
+        "lauschig"
+      ],
+      "url": "posts/2025-12-03-karl-auer-weihnachten.html"
+    }
+  }
+]
+
+[2025-12-03T14:18:27.522Z]
+[
+  {
+    "type": "add",
+    "post": {
+      "id": "2025-12-03-randall-e-im-grunen-taubenschlag",
+      "date": "2025-12-03",
+      "title": "Randall-E im grünen Taubenschlag",
+      "excerpt": "was die Viecher nicht alles machen wenn niemand hinschaut",
+      "theme": "Philosophie",
+      "tags": [
+        "tauben",
+        "schlag",
+        "tiere"
+      ],
+      "url": "posts/2025-12-03-randall-e-im-grunen-taubenschlag.html"
+    }
+  }
+]
+
+[2025-12-03T15:49:49.723Z]
+[
+  {
+    "type": "add",
+    "post": {
+      "id": "2025-12-03-katzenjammer",
+      "date": "2025-12-03",
+      "title": "Katzenjammer",
+      "excerpt": "Mal wird gesungen, mal gejammert",
+      "theme": "philosophie",
+      "tags": [
+        "katzen",
+        "jammerei"
+      ],
+      "url": "posts/2025-12-03-katzenjammer.html"
+    }
+  }
+]
+
+[2025-12-03T18:49:35.634Z]
+[
+  {
+    "type": "add",
+    "post": {
+      "id": "2025-12-03-reden-ohne-wider",
+      "date": "2025-12-03",
+      "title": "Reden ohne wider",
+      "excerpt": "Falls jemand in die Situation eines Austausches mit Menschen gerät, die nach vorgestern gerichtet sind",
+      "theme": "gesellschaft",
+      "tags": [
+        "diskussion",
+        "philosophie",
+        "gesellschaft",
+        "weltbild",
+        "reden"
+      ],
+      "url": "posts/2025-12-03-reden-ohne-wider.html"
+    }
+  }
+]
+
+[2025-12-03T18:55:59.594Z]
+[
+  {
+    "type": "update",
+    "old": {
+      "id": "2025-12-03-reden-ohne-wider",
+      "date": "2025-12-03",
+      "title": "Reden ohne Wider - \"Wenn alles grau-braun wäre...\"",
+      "excerpt": "Zum Austausche mit Menschen, deren Richtung das Vorgestern ist",
+      "theme": "gesellschaft",
+      "tags": [
+        "diskussion",
+        "philosophie",
+        "gesellschaft",
+        "weltbild",
+        "reden"
+      ],
+      "url": "posts/2025-12-03-reden-ohne-wider.html"
+    },
+    "new": {
+      "id": "2025-12-03-reden-ohne-wider",
+      "date": "2025-12-03",
+      "title": "Reden ohne wider",
+      "excerpt": "Falls jemand in die Situation eines Austausches mit Menschen gerät, die nach vorgestern gerichtet sind",
+      "theme": "gesellschaft",
+      "tags": [
+        "diskussion",
+        "philosophie",
+        "gesellschaft",
+        "weltbild",
+        "reden"
+      ],
+      "url": "posts/2025-12-03-reden-ohne-wider.html"
+    }
+  }
+]
+
+[2025-12-03T19:24:00.211Z]
+[
+  {
+    "type": "update",
+    "old": {
+      "id": "2025-12-03-reden-ohne-wider",
+      "date": "2025-12-03",
+      "title": "Reden ohne wider",
+      "excerpt": "Falls jemand in die Situation eines Austausches mit Menschen gerät, die nach vorgestern gerichtet sind",
+      "theme": "gesellschaft",
+      "tags": [
+        "diskussion",
+        "philosophie",
+        "gesellschaft",
+        "weltbild",
+        "reden"
+      ],
+      "url": "posts/2025-12-03-reden-ohne-wider.html"
+    },
+    "new": {
+      "id": "2025-12-03-reden-ohne-wider",
+      "date": "2025-12-03",
+      "timestamp": "2025-12-03T19:24:00.204Z",
+      "title": "Reden ohne wider",
+      "excerpt": "Für eine Diskussion mit Menschen, die gerne nach Vorgestern wollen",
+      "theme": "gesellschaft",
+      "tags": [
+        "diskussion",
+        "philosophie",
+        "gesellschaft",
+        "weltbild",
+        "reden"
+      ],
+      "url": "posts/2025-12-03-reden-ohne-wider.html"
+    }
+  }
+]

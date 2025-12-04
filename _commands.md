@@ -1,3 +1,28 @@
+# Dateistruktur
+
+```powershell
+Get-ChildItem -Recurse |
+   Where-Object { $_.FullName -notmatch '(node_modules|\.history|api_backup)' } |
+   ForEach-Object { $_.FullName -replace [regex]::Escape($PWD), '.' }
+```
+
+# start script
+npm run deploy
+
+# 2do
+- SETUP.md für neo-deploy
+- .env safe?
+- p indent überarbeiten
+- größe überschriften und post-card titel?
+- klickbare zonen farblich abheben
+- bei json-updater: alle felder vergleichen
+- zeit für reihenfolge hinzufügen
+
+-> obsidian
+- wenn template eingefügt -> nach BLOG_DRAFT
+- wenn template aus dem nichts erstellt -> in BLOG_DRAFT
+
+
 $ neocities
 
 |\---/|
@@ -29,3 +54,27 @@ neocities info
 Zeigt Infos zu deiner Site (Speicher, etc.).
 neocities info
 
+            // Initialer HTML-Aufbau: Nur Excerpt anzeigen, aber mit voller Link und Toggle-Button
+            article.innerHTML = `
+                <div class="post-initial-display" data-post-id="${post.id}">
+                    <header class="post-header">
+                        <div class="meta">
+                            ${formatDate(post.date)}
+                            <div class="post-tags">${tagsHtml}</div>
+                        </div>
+                        
+                        <h3>${post.title}</h2>
+                        <div class="post-excerpt">${post.excerpt}</div>
+                    </header>
+
+                    <div class="full-content-area ${isHighlightTarget ? 'is-expanded' : ''}">
+                        ${isHighlightTarget ? '<p>Lade vollständigen Artikel...</p>' : ''}
+                    </div>
+
+                    <button class="toggle-full-content" data-post-id="${post.id}">
+                        Artikel ${isHighlightTarget ? 'schließen' : 'lesen'}
+                    </button>
+                    <a href="${post.url}" class="direct-post-link btn" title="Zum vollständigen Beitrag">→</a>
+                </div>                
+                <hr>
+            `;

@@ -1,11 +1,9 @@
-/* ========================================
-   LAYOUT.CSS - Für deine bestehende HTML-Struktur
-   ======================================== */
+/* ============================================
+   LAYOUT
+   Container, Grid Systems, Page Structure
+   ============================================ */
 
-/* ========================================
-   CONTAINER
-   ======================================== */
-
+/* --- Container --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,258 +15,233 @@ main.container {
     padding: var(--space-lg) var(--space-md);
 }
 
-/* ========================================
-   HEADER
-   ======================================== */
+/* --- Sections --- */
+section {
+    margin-bottom: var(--space-xl);
+}
 
+/* --- Content Spacing --- */
+.text-content > * + * {
+    margin-top: var(--space-lg);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
 .site-header {
-    background: var(--color-bg-light);
-    border-bottom: 2px solid var(--color-border);
-    padding: var(--space-lg) var(--space-md);
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-lg) 0;
     text-align: center;
 }
 
 .site-header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: var(--font-size-h1);
     color: var(--color-text);
 }
 
 .tagline {
-    color: var(--color-muted);
-    margin-top: 0.5em;
-    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-lg);
 }
 
-/* ========================================
+/* ============================================
    NAVIGATION
-   ======================================== */
-
+   ============================================ */
 .main-nav {
     display: flex;
-    justify-content: center;
-    gap: var(--space-md);
-    background: var(--color-bg-light);
-    padding: var(--space-md);
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg);
+    padding: var(--space-sm) var(--space-md);
     border-bottom: 1px solid var(--color-border);
-    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
+    background: var(--nav-bg-alpha, var(--nav-bg));
 }
 
-.main-nav a {
-    color: var(--color-text);
-    text-decoration: none;
-    padding: 0.6em 1.2em;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    font-weight: 500;
-}
-
-.main-nav a:hover {
-    background: var(--color-accent);
-    color: var(--color-bg);
-}
-
-.main-nav a.active {
-    background: var(--color-accent);
-    color: var(--color-bg);
-}
-
-/* ========================================
-   SECTIONS
-   ======================================== */
-
-section {
-    margin-bottom: var(--space-xl);
-}
-
-.intro {
-    background: var(--color-bg-light);
-    border-left: 4px solid var(--color-accent);
-    padding: var(--space-md);
-    border-radius: 4px;
-}
-
-.intro h2 {
-    margin-top: 0;
-}
-
-/* ========================================
-   RECENT POSTS
-   ======================================== */
-
-.recent-posts h2 {
-    margin-bottom: var(--space-md);
-}
-
-#recent-posts-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--space-md);
-}
-
-/* Post Cards (werden von JavaScript erstellt) */
-.post-card {
-    background: var(--color-bg-light);
-    border: 2px solid var(--color-border);
-    border-radius: 8px;
-    padding: var(--space-md);
-    transition: all 0.3s ease;
+.nav-left,
+.nav-right {
     display: flex;
-    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.post-card:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.post-card .post-category {
-    display: inline-block;
-    background: var(--color-accent);
-    color: var(--color-bg);
-    padding: 0.3em 0.8em;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    margin-bottom: var(--space-sm);
-    align-self: flex-start;
-}
-
-.post-card h3 {
-    margin: 0 0 var(--space-sm) 0;
-    font-size: 1.3rem;
-}
-
-.post-card h3 a {
-    color: var(--color-text);
+.main-nav a.nav-link {
     text-decoration: none;
+    color: var(--color-text);
+    font-weight: 700;
+    padding: var(--space-sm) 0;
+    transition: color 0.2s ease;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
 }
 
-.post-card h3 a:hover {
+.main-nav a.nav-link:hover,
+.main-nav a.nav-link.active {
     color: var(--color-accent);
 }
 
-.post-card .post-meta {
-    color: var(--color-muted);
-    font-size: 0.9rem;
-    margin-bottom: var(--space-sm);
+/* ============================================
+   GRID LAYOUTS
+   ============================================ */
+
+/* Posts Grid */
+#recent-posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
 }
 
-.post-card .post-excerpt {
-    color: var(--color-muted);
-    line-height: 1.6;
-    flex-grow: 1;
-}
-
-/* ========================================
-   QUICK LINKS (deine .link-box)
-   ======================================== */
-
+/* Quick Links Grid */
 .quick-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-md);
-    margin-top: var(--space-lg);
-}
-
-.link-box {
-    background: var(--color-bg-light);
-    border: 2px solid var(--color-border);
-    border-radius: 8px;
-    padding: var(--space-md);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.link-box:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-4px);
-    background: var(--color-accent);
-    color: var(--color-bg);
-}
-
-.link-box h3 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    color: inherit;
-}
-
-.link-box p {
-    margin-bottom: 0;
-    color: inherit;
-    opacity: 0.9;
-}
-
-/* ========================================
-   HASHTAGS
-   ======================================== */
-
-.hashtags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    margin-top: var(--space-sm);
-}
-
-.hashtag {
-    background: var(--color-accent);
-    color: var(--color-bg);
-    padding: 0.3em 0.8em;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.hashtag:hover {
-    background: var(--color-accent-hover);
-    transform: scale(1.05);
-}
-
-/* ========================================
-   FOOTER
-   ======================================== */
-
-.site-footer {
-    background: var(--color-bg-light);
-    border-top: 2px solid var(--color-border);
-    padding: var(--space-lg);
+    gap: var(--space-lg);
     margin-top: var(--space-xl);
+}
+
+/* Portal Grid */
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+    
+    main.container {
+        padding: var(--space-md) var(--space-sm);
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+        padding: var(--space-sm);
+    }
+    
+    .nav-left,
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #recent-posts-list,
+    .quick-links,
+    .portal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header h1 {
+        font-size: var(--font-size-h2);
+    }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+    background: var(--footer-bg);
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-lg) 0;
+    margin-top: auto;
     text-align: center;
+    font-size: var(--font-size-sm);
 }
 
 .site-footer p {
-    color: var(--color-muted);
-    margin: 0;
+    color: var(--color-text-muted);
+    margin: var(--space-xs) 0;
 }
 
 .site-footer a {
     color: var(--color-accent);
 }
 
-/* ========================================
-   RESPONSIVE
-   ======================================== */
+/* ============================================
+   DECORATIVE PATTERNS
+   ============================================ */
+.site-header, 
+.site-footer {
+    position: relative;
+    overflow: hidden;
+}
 
+.site-header::before, 
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.site-header .container,
+.site-footer .container, 
+.site-footer p {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+section + section {
+    margin-top: var(--space-xl);
+}
+
+/* ============================================
+   RESPONSIVE (von oben erweitert)
+   ============================================ */
 @media (max-width: 768px) {
     .site-header h1 {
-        font-size: 2rem;
+        font-size: var(--font-size-h2);
     }
 
     .main-nav {
         flex-direction: column;
-        align-items: center;
+        padding: var(--space-md);
+        gap: var(--space-md);
     }
 
-    #recent-posts-list {
-        grid-template-columns: 1fr;
+    .nav-left, 
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .quick-links {
+    .nav-right {
+        flex-direction: row;
+        gap: var(--space-md);
+    }
+
+    #recent-posts-list,
+    .quick-links,
+    .portal-grid {
         grid-template-columns: 1fr;
     }
 }

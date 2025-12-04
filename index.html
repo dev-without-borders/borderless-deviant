@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borderless Deviant</title>
-    <link rel="stylesheet" href="/css/themes/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
+    <title>borderless deviant</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            // Holt Einstellung oder nimmt 'dark' als Standard
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/site-index.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1>Borderless Deviant</h1>
-        <p class="tagline">Rohdaten aus 700 Notizen. Systemkritik. ADHS. Lobbyismus. Code. Existenzielles.</p>
-    </header>
-
-    <nav class="main-nav">
-        <a href="index.html" class="active">Start</a>
-        <a href="strom.html">Strom</a>
-        <a href="themen.html">Themen</a>
-        <a href="wilde-reise.html">Wilde Reise</a>
-        <a href="about.html">About</a>
-    </nav>
+    <my-header></my-header>
+    <my-nav></my-nav>
 
     <main class="container">
         <section class="intro">
@@ -39,7 +43,7 @@
         <section class="recent-posts">
             <h2>Neueste Einträge</h2>
             <div id="recent-posts-list">
-                <!-- Wird von JavaScript gefüllt -->
+                <p class="loading">Lade Gedanken...</p>
             </div>
         </section>
 
@@ -59,14 +63,18 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
-    </footer>
+    <my-footer></my-footer>
 
-    <script src="js/posts.js"></script>
     <script>
-        loadRecentPosts('recent-posts-list', 5);
+        // Startet das Laden der Posts, sobald die Seite bereit ist
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof loadRecentPosts === 'function') {
+                loadRecentPosts('recent-posts-list', 5);
+            }
+        });
     </script>
-        <script src="js/theme-toggle.js"></script> <!-- NEU -->
+
+    <script src="/js/layout-components.js" defer></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>

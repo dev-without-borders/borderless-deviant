@@ -1,0 +1,213 @@
+/* ============================================
+   PLAYGROUND - Temporary Experiments
+   Last updated: [DATUM]
+   ============================================ */
+
+/* ============================================
+   POST CARD EXPANSION SYSTEM
+   ============================================ */
+
+/* Collapsed State (Default) */
+.full-content-area {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    opacity: 0;
+    transition: 
+        max-height 0.3s ease-out,
+        opacity 0.3s ease-out,
+        padding 0.3s ease-out,
+        border-width 0.3s ease-out;
+}
+
+.full-content-area * {
+    color: transparent;
+    transition: color 0.3s ease-out;
+}
+
+/* Expanded State */
+.post-card.is-expanded .full-content-area {
+    max-height: 5000px;
+    overflow: visible;
+    padding: 1em;
+    opacity: 1;
+    border-width: 0 1px;
+    border-style: dotted;
+    border-color: var(--color-accent);
+    background-color: var(--color-bg-darker);
+    transition: 
+        max-height 0.5s ease-in,
+        opacity 0.5s ease-in,
+        padding 0.3s ease-in,
+        border-width 0.3s ease-in;
+}
+
+.post-card.is-expanded .full-content-area * {
+    color: inherit;
+    transition: color 0.5s ease-in;
+}
+
+.post-card.is-expanded .full-content-area p {
+    text-indent: 1em;
+}
+
+/* Override falls nötig */
+.post-card.is-expanded {
+    max-height: none !important;
+    height: auto !important;
+}
+
+.post-card.is-expanded .full-content-area {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+
+/* ===== HIGHLIGHT ANIMATION ===== */
+.highlight-target {
+    animation: highlight-pulse 2.5s ease-out forwards !important;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+@keyframes highlight-fade {
+    0% { 
+        background-color: var(--color-accent);
+        box-shadow: 0 0 15px var(--color-accent);
+        opacity: 0.8;
+    }
+    50% { 
+        background-color: var(--color-accent);
+        opacity: 0.4;
+    }
+    100% { 
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+    }
+}
+
+.post-card.highlight-target {
+    animation: highlight-fade 3s ease-out forwards;
+}
+
+/* ===== DIRECT LINK ===== */
+.direct-post-link {
+    float: right;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 0.1em 25px;
+    transition: transform 0.2s;
+}
+
+.direct-post-link:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    color: black;
+}
+
+/* ===== THEME FILTERS ===== */
+.theme-filter-button {
+    background-color: var(--color-bg-light);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    padding: 0.5em 1em;
+    margin: 0 0.5em 0.5em 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.theme-filter-button:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+    transform: translateY(-2px);
+}
+
+.theme-filter-button.active {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+    font-weight: bold;
+}
+
+#theme-filters.is-hidden {
+    display: none;
+}
+
+#theme-filters h4 {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+}
+
+/* ===== POST META ===== */
+.post-tags {
+    float: right;
+}
+
+.meta {
+    margin-bottom: 1.5em;
+}
+
+.post-excerpt {
+    font-style: italic;
+}
+
+.post-initial-display {
+    background-color: var(--color-bg-light);
+    padding: 1em;
+    border: 1px dotted var(--color-accent);
+}
+
+/* ===== SCROLL TO TOP ===== */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#scrollToTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+
+#scrollToTopBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== STATES ===== */
+.no-posts-found {
+    text-align: center;
+    color: var(--color-muted);
+    margin-top: 2em;
+    font-style: italic;
+}
+
+.error {
+    color: var(--alert-error);
+    font-weight: bold;
+    padding: var(--space-md);
+    background: rgba(245, 101, 101, 0.1);
+    border-left: 4px solid var(--alert-error);
+    border-radius: 4px;
+}

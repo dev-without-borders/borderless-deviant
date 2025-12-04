@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>borderless deviant - Systemdenken</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            // Holt Einstellung oder nimmt 'dark' als Standard
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="css/theme-menschenwelt.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body class="theme-menschenwelt">
+    <my-header></my-header>
+    <my-nav></my-nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Systeme und Strukturen</h2>
+            <p>Die Welt, in der wir leben</p>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/layout-components.js" defer></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

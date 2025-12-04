@@ -3,83 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Themen - Borderless Deviant</title>
-    <link rel="stylesheet" href="/css/themes/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
+    <title>borderless deviant - Themen</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            // Holt Einstellung oder nimmt 'dark' als Standard
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/site-themen.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1><a href="index.html">Borderless Deviant</a></h1>
-    </header>
-
-    <nav class="main-nav">
-        <a href="index.html">Start</a>
-        <a href="strom.html">Strom</a>
-        <a href="themen.html" class="active">Themen</a>
-        <a href="wilde-reise.html">Wilde Reise</a>
-        <a href="about.html">About</a>
-    </nav>
+    <my-header></my-header>
+    <my-nav></my-nav>
 
     <main class="container">
-        <section class="page-header">
-            <h2>Themen</h2>
-            <p>Durchsuche alle Inhalte nach Hashtags - quer durch Blog und Themenseiten.</p>
+        
+        <!-- 1. Die Tag-Cloud -->
+        <section class="tag-cloud-section">
+            <h2>Hashtag Navigation</h2>
+            <div id="tag-cloud" class="cloud-container">
+                <!-- Hier generiert JS die Buttons rein -->
+                <p class="loading">Lade Hashtags...</p>
+            </div>
         </section>
 
-        <div class="tag-search-bar">
-            <input 
-                type="text" 
-                id="tag-search" 
-                placeholder="Nach Tag suchen (z.B. #lobbyismus)..."
-                autocomplete="off"
-            >
-            <div id="tag-suggestions"></div>
-        </div>
+        <hr>
 
-        <div id="tag-results">
-            <!-- Wird gefüllt bei Tag-Auswahl -->
-        </div>
+        <!-- 2. Die Thematischen Listen (Kategorien) -->
+        <!-- WICHTIG: Die IDs müssen 'list-' + dein json-theme name sein (z.B. "politik") -->
+        
+        <section class="topic-grid">
+            
+            <!-- Beispiel Kategorie: Politik -->
+            <article class="topic-box">
+                <h3>Politik & Gesellschaft</h3>
+                <ul id="list-politik" class="link-list">
+                    <!-- Hier kommen die Links rein -->
+                </ul>
+            </article>
 
-        <div id="all-tags-overview" class="theme-clusters">
-            <!-- Zeigt alle verfügbaren Tags wenn kein Filter aktiv -->
-        </div>
+            <!-- Beispiel Kategorie: Coding / Tech -->
+            <article class="topic-box">
+                <h3>Vibe Coding & Tech</h3>
+                <ul id="list-coding" class="link-list">
+                    <!-- Hier kommen die Links rein -->
+                </ul>
+            </article>
+
+            <!-- Beispiel Kategorie: Gaming -->
+            <article class="topic-box">
+                <h3>Games & Retro</h3>
+                <ul id="list-gaming" class="link-list">
+                </ul>
+            </article>
+
+            <!-- Beispiel Kategorie: Wissen / ADHS -->
+            <article class="topic-box">
+                <h3>Wissen & Hirn</h3>
+                <ul id="list-wissen" class="link-list">
+                </ul>
+            </article>
+            
+            <!-- Weitere Kategorien nach Bedarf... -->
+
+        </section>
     </main>
 
-    <footer class="site-footer">
-        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
-    </footer>
 
-    <script src="js/posts.js"></script>
-    <script src="js/hashtags.js"></script>
-    <script src="js/x-site-tags.js"></script>
+    <my-footer></my-footer>
+
     <script>
-        const urlTag = getUrlParameter('tag');
-        
-        if (urlTag) {
-            document.getElementById('tag-search').value = urlTag;
-            document.getElementById('all-tags-overview').style.display = 'none';
-            showTagResults(urlTag, 'tag-results');
-        } else {
-            loadThemeClusters('all-tags-overview');
-        }
-        
-        document.getElementById('tag-search').addEventListener('input', async (e) => {
-            const query = e.target.value.trim();
-            
-            if (query.length === 0) {
-                document.getElementById('tag-results').innerHTML = '';
-                document.getElementById('all-tags-overview').style.display = 'block';
-                return;
-            }
-            
-            if (query.startsWith('#')) {
-                document.getElementById('all-tags-overview').style.display = 'none';
-                showTagResults(query, 'tag-results');
-            }
+        // Beispiel: Wir laden gezielt Themen in die Boxen
+        document.addEventListener('DOMContentLoaded', () => {
+            filterPostsByTheme('politik', 'list-politik');
+            filterPostsByTheme('wissen', 'list-wissen');
         });
     </script>
-        <script src="js/theme-toggle.js"></script> <!-- NEU -->
+
+    <script src="/js/layout-components.js" defer></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>

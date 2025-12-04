@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>borderless deviant - Blog</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+</head>
+<body class="theme-kodierung">
+    <my-header></my-header>
+    <my-nav></my-nav>
+    <nav class="back-nav" style="margin: 10px;">
+        <a href="../../strom.html">← Zurück zum Strom</a>
+    </nav>
+
+    <main>
+        <article class="post-content">
+            <header>
+                <span class="meta-date">27.11.2025</span>
+                <h1>Status, quo vadis</h1>
+                <div class="tags">
+                    <!-- Aus deinen Tags generiert -->
+                    <span class="tag">#politik</span>
+                    <span class="tag">#weltschmerz</span>
+                    <span class="tag">#gesellschaft</span>
+                </div>
+            </header>
+            <div class="post-generated">
+            <!-- Hier ist der Markdown-zu-HTML konvertierte Teil -->
+                <p>
+                    Es ist diese <strong>Vermeidbarkeit</strong>, die mich wahnsinnig macht. 
+                    Alles liegt auf der Hand, und wir laufen lachend in die Kreissäge oder 
+                    schmeißen nochmal Kohle in den Tender – kurz vor dem Abgrund.
+                </p>
+                <p>[...]</p>
+            </div>
+        </article>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/layout-components.js" defer></script>
+<!--    <script src="/js/main.js"></script> -->
+</body>
+</html>

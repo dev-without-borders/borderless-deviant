@@ -2,7 +2,7 @@
   "config": {
     "baseUrl": "https://borderless-dev.neocities.org",
     "blogPath": "/posts",
-    "lastBuildDate": "2025-12-03--20-24"
+    "lastBuildDate": "2025-12-03--20-00"
   },
   "posts": [
     {
@@ -45,9 +45,8 @@
     {
       "id": "2025-12-03-reden-ohne-wider",
       "date": "2025-12-03",
-      "timestamp": "2025-12-03T19:24:00.204Z",
       "title": "Reden ohne wider",
-      "excerpt": "Für eine Diskussion mit Menschen, die gerne nach Vorgestern wollen",
+      "excerpt": "Falls jemand in die Situation eines Austausches mit Menschen gerät, die nach vorgestern gerichtet sind",
       "theme": "gesellschaft",
       "tags": [
         "diskussion",

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | borderless deviant</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="{{EXCERPT}}">
+    <meta name="date" content="{{DATE}}">
+    <meta name="keywords" content="{{TAGS_STRING}}">
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+</head>
+<body>
+    <my-header></my-header>
+    <my-nav></my-nav>
+    <nav class="back-nav" style="margin: 10px;">
+        <a href="../strom.html">← Zurück zum Strom</a>
+    </nav>
+
+    <main>
+        <article class="post-content">
+            <header>
+                <span class="meta-date">{{DATE_FORMATTED}}</span>
+                <h1>{{TITLE}}</h1>
+                <span class="meta-theme">{{THEME}}</span>
+                <p class="excerpt">{{EXCERPT}}</p>
+                <div class="tags">{{TAGS_HTML}}</div>
+            </header>
+            <div class="post-generated">
+                {{CONTENT}}
+            </div>
+        </article>
+    </main>
+    
+<!-- {{NOTES}} -->
+
+    <my-footer></my-footer>
+
+    <script src="/js/layout-components.js" defer></script>
+</body>
+</html>

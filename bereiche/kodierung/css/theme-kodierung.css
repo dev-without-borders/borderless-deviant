@@ -1,97 +1,39 @@
 /* ========================================
-   THEME: KODIERUNG
-   Terminal, Code, Matrix-Vibes
+   THEME: KODIERUNG (Refactored)
    ======================================== */
 
 .theme-kodierung {
-    --color-bg: #0d1117;
-    --color-text: #c9d1d9;
-    --color-accent: #58a6ff;
-    --color-secondary: #7ee787;
-    --color-muted: #8b949e;
-    --color-border: #30363d;
+    /* 1. BASIS FARBPALETTE (GitHub Dark Dimmed Style) */
+    --color-bg: #0d1117;           /* Ganz dunkler Hintergrund */
+    --color-text: #c9d1d9;         /* Helles Grau für Text */
+    --color-text-muted: #8b949e;
+    --color-border: #30363d;       /* Dunkle Rahmen */
     
+    --color-accent: #58a6ff;       /* Blau */
+    --color-accent-hover: #79c0ff;
+    --color-secondary: #238636;    /* Grün für Buttons/Badges */
+
+    /* 2. SEMANTISCHE ZUWEISUNG (Hier passiert die Magie) */
+    --header-bg: #161b22;          /* Header etwas heller als Body */
+    --nav-bg: #161b22;
+    --footer-bg: #161b22;
+    --card-bg: #0d1117;            /* Cards verschmelzen mit BG oder leicht anders */
+    --card-border: #30363d;
+
+    /* 3. SCHRIFTARTEN */
+    font-family: 'Courier New', monospace;
     background: var(--color-bg);
     color: var(--color-text);
-    font-family: 'Courier New', monospace;
 }
 
-.theme-kodierung a {
-    color: var(--color-accent);
-    text-decoration: none;
+/* Kleine spezifische Anpassungen dürfen bleiben */
+.theme-kodierung a:not(.btn):not(.tag) {
     border-bottom: 1px dotted var(--color-accent);
-}
-
-.theme-kodierung a:hover {
-    border-bottom-style: solid;
-}
-
-.theme-kodierung .site-header {
-    background: #161b22;
-    border-bottom: 2px solid var(--color-accent);
-}
-
-.theme-kodierung .main-nav {
-    background: #161b22;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.theme-kodierung .main-nav a.active {
-    background: var(--color-accent);
-    color: var(--color-bg);
-}
-
-.theme-kodierung .bereich-intro {
-    background: #161b22;
-    padding: 2rem;
-    border-radius: 6px;
-    border: 1px solid var(--color-border);
-    border-left: 3px solid var(--color-secondary);
-    margin-bottom: 3rem;
+    text-decoration: none;
 }
 
 .theme-kodierung .bereich-intro::before {
     content: '> ';
-    color: var(--color-secondary);
+    color: var(--color-accent);
     font-weight: bold;
-}
-
-.theme-kodierung .static-post {
-    background: #161b22;
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--color-border);
-    border-left: 2px solid var(--color-accent);
-    transition: border-left-width 0.2s;
-}
-
-.theme-kodierung .static-post:hover {
-    border-left-width: 4px;
-}
-
-.theme-kodierung .tag {
-    background: rgba(88, 166, 255, 0.1);
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
-    font-family: 'Courier New', monospace;
-}
-
-.theme-kodierung .tag:hover {
-    background: var(--color-accent);
-    color: var(--color-bg);
-}
-
-.theme-kodierung h2 {
-    color: var(--color-secondary);
-}
-
-.theme-kodierung h3 a {
-    color: var(--color-accent);
-    border-bottom: none;
-}
-
-.theme-kodierung .site-footer {
-    border-top: 1px solid var(--color-border);
-    background: #161b22;
 }

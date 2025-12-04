@@ -1,16 +1,33 @@
 {
-  "staticPages": [
+  "lastBuildDate": "2025-11-27--15-43",
+  "pages": [
     {
       "id": "spielerei-retrokram",
       "title": "Retrokram: CRT, FPGA & Authentizität",
+      "date": "2024-02-01",
       "url": "bereiche/spielerei/retrokram.html",
       "bereich": "spielerei",
       "tags": ["#retrokram", "#hardware", "#crt", "#emulation"],
       "excerpt": "Von CRT-Monitoren bis FPGA-Hardware. Authentisches Retro-Feeling mit moderner Convenience."
     },
+        {
+      "id": "vibe-coding-intro",
+      "title": "Vibe Coding: Programmieren nach Gefühl",
+      "date": "2024-01-10",
+      "url": "bereiche/kodierung/ki-tools.html",
+      "excerpt": "Warum strukturiertes Planen manchmal der Feind von Flow ist – und wie KI dabei hilft, intuitiv zu coden.",
+      "tags": [
+        "coding",
+        "ki",
+        "workflow",
+        "adhs"
+      ],
+      "theme": "wissen"
+    },
     {
       "id": "spielerei-spielundkunst",
       "title": "Spiel und Kunst: Wo ist die Grenze?",
+      "date": "2024-02-05",
       "url": "bereiche/spielerei/spielundkunst.html",
       "bereich": "spielerei",
       "tags": ["#spielundkunst", "#indie", "#kunst", "#gaming"],
@@ -19,6 +36,7 @@
     {
       "id": "kodierung-ki-tools",
       "title": "KI-Tools: Meine täglichen Begleiter",
+      "date": "2024-02-15",
       "url": "bereiche/kodierung/ki-tools.html",
       "bereich": "kodierung",
       "tags": ["#ki", "#tools", "#vibecoding", "#workflow"],
@@ -27,6 +45,7 @@
     {
       "id": "kodierung-github",
       "title": "GitHub als Gedächtnis",
+      "date": "2024-03-01",
       "url": "bereiche/kodierung/github.html",
       "bereich": "kodierung",
       "tags": ["#github", "#versionskontrolle", "#adhs", "#workflow"],
@@ -35,6 +54,7 @@
     {
       "id": "geistesblitze-ideen",
       "title": "Ideensammlung: Die Liste",
+      "date": "2024-02-21",
       "url": "bereiche/geistesblitze/ideen.html",
       "bereich": "geistesblitze",
       "tags": ["#ideen", "#projekte", "#vision", "#brainstorm"],
@@ -43,6 +63,7 @@
     {
       "id": "menschenwelt-lobbyismus",
       "title": "Lobbyismus: Die unsichtbare Macht",
+      "date": "2024-04-01",
       "url": "bereiche/menschenwelt/lobbyismus.html",
       "bereich": "menschenwelt",
       "tags": ["#lobbyismus", "#politik", "#transparenz", "#macht"],
@@ -51,6 +72,7 @@
     {
       "id": "menschenwelt-systemdenken",
       "title": "Systemdenken: Strukturen statt Symptome",
+      "date": "2024-05-03",
       "url": "bereiche/menschenwelt/systemdenken.html",
       "bereich": "menschenwelt",
       "tags": ["#systemdenken", "#systemkritik", "#struktur", "#gesellschaft"],

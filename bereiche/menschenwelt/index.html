@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menschenwelt - Borderless Deviant</title>
-    <link rel="stylesheet" href="../../css/base.css">
-    <link rel="stylesheet" href="../../css/layout.css">
+    <title>borderless deviant - Menschenwelt</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            // Holt Einstellung oder nimmt 'dark' als Standard
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="css/theme-menschenwelt.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body class="theme-menschenwelt">
-    <header class="site-header">
-        <h1><a href="../../index.html">Borderless Deviant</a></h1>
-        <p class="bereich-breadcrumb">
-            <a href="../../wilde-reise.html">Wilde Reise</a> → Menschenwelt
-        </p>
-    </header>
+    <my-header></my-header>
+    <my-nav></my-nav>
 
-    <nav class="main-nav">
-        <a href="../../index.html">Start</a>
-        <a href="../../strom.html">Strom</a>
-        <a href="../../themen.html">Themen</a>
-        <a href="../../wilde-reise.html" class="active">Wilde Reise</a>
-        <a href="../../about.html">About</a>
-    </nav>
+    <main class="container">
+        <h1>Politik & Weltschmerz</h1>
+        
+        <!-- Hier muss data-category="politik" stehen, passend zum JSON "theme": "politik" -->
+        <div id="post-list" data-category="politik" class="grid-container">
+            <p>Lade Artikel...</p>
+        </div>
+    </main>
 
+    <!--
     <main class="container">
         <section class="bereich-intro">
             <h2>⚡ Menschenwelt</h2>
@@ -70,14 +80,12 @@
         <section class="related-from-blog">
             <h3>Verwandte Blog-Posts</h3>
             <div id="related-blog-posts">
-                <!-- Wird von JavaScript gefüllt -->
             </div>
         </section>
     </main>
+-->
 
-    <footer class="site-footer">
-        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
-    </footer>
+    <my-footer></my-footer>
 
     <script src="../../js/posts.js"></script>
     <script src="../../js/x-site-tags.js"></script>
@@ -85,5 +93,8 @@
         loadRelatedPosts(['#lobbyismus', '#systemkritik', '#systemdenken', '#macht'], 'related-blog-posts');
         initCrossSiteTags();
     </script>
+
+    <script src="/js/layout-components.js" defer></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

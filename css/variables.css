@@ -1,0 +1,98 @@
+/* ============================================
+   CSS VARIABLES
+   Light Mode (Standard) + Dark Mode Toggle
+   ============================================ */
+
+:root {
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Category Colors */
+    --category-code: #58a6ff;
+    --category-energy: #f1e05a;
+    --category-politics: #f85149;
+    --category-knowledge: #58a6ff;
+    --category-culture: #a371f7;
+    
+    /* Alert Colors (schon definiert, aber explizit) */
+    --alert-info: #4299e1;
+    --alert-success: #48bb78;
+    --alert-warning: #ed8936;
+    --alert-error: #f56565;
+
+/* ============================================
+   LIGHT MODE (DEFAULT)
+   ============================================ */
+    /* --- Basis Farbpalette --- */
+    --color-bg: #ffffff;
+    --color-bg-light: #f8f9fa;
+    --color-bg-lighter: #fdfdfd;
+    --color-bg-darker: #e9ecef;
+    
+    --color-text: #2c3e50;
+    --color-text-muted: #6c757d;
+    
+    --color-border: #dee2e6;
+    --color-accent: #3498db;
+    --color-accent-hover: #6db0dd;
+    --color-secondary: #e67e22;
+    --color-secondary-hover: #a05717;  
+    
+    --nav-bg-alpha: rgba(248, 249, 250, 0.95);
+    
+    /* --- Semantische Komponenten --- */
+    --header-bg: var(--color-bg-light);
+    --nav-bg: var(--color-bg-light);
+    --footer-bg: var(--color-bg-light);
+    --card-bg: var(--color-bg);
+    --card-border: var(--color-border);
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+[data-theme="dark"] {
+    /* --- Basis Farbpalette überschreiben --- */
+    --color-bg: #1a1a1a;
+    --color-bg-light: #2d2d2d;
+    --color-bg-lighter: #3a3a3a;
+    --color-bg-darker: #0d0d0d;
+    
+    --color-text: #e0e0e0;
+    --color-text-muted: #a0a0a0;
+    
+    --color-border: #404040;
+    --color-accent: #64b5f6;
+    --color-accent-hover: #93bdda;
+    --color-secondary: #ff9800;
+    --color-secondary-hover: #e29756;
+
+    --nav-bg-alpha: rgba(30, 30, 30, 0.95);
+    
+    /* --- Semantische Komponenten neu mappen --- */
+    --header-bg: var(--color-bg-light);
+    --nav-bg: var(--color-bg-light);
+    --footer-bg: var(--color-bg-darker);
+    --card-bg: var(--color-bg-light);
+    --card-border: var(--color-border);
+}
+
+/* ============================================
+   TRANSITIONS
+   Nur auf wechselnden Elementen
+   ============================================ */
+body,
+.site-header,
+.site-footer,
+.post-card,
+.btn {
+    transition: 
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}

@@ -3,64 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wilde Reise - Borderless Deviant</title>
-    <link rel="stylesheet" href="/css/themes/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
+    <title>borderless deviant - Wilde Reise</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            // Holt Einstellung oder nimmt 'dark' als Standard
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/site-wilde-reise.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1><a href="index.html">Borderless Deviant</a></h1>
-    </header>
+    <my-header></my-header>
+    <my-nav></my-nav>
 
-    <nav class="main-nav">
-        <a href="index.html">Start</a>
-        <a href="strom.html">Strom</a>
-        <a href="themen.html">Themen</a>
-        <a href="wilde-reise.html" class="active">Wilde Reise</a>
-        <a href="about.html">About</a>
-    </nav>
-
+    <!-- 3. Der eigentliche Inhalt (Das Einzige, was sich ändert) -->
     <main class="container">
         <section class="page-header">
-            <h2>Wilde Reise</h2>
-            <p>
-                Thematische Tiefenbohrungen. Jeder Bereich hat sein eigenes Universum, 
-                sein eigenes Design, seine eigene Logik.
-            </p>
+            <h2>Die Wilde Reise</h2>
+            <p>Spezielle Bereiche mit eigenem Design und Fokus.</p>
         </section>
 
-        <div class="bereich-grid">
-            <a href="bereiche/spielerei/" class="bereich-card bereich-spielerei">
+        <div class="portal-grid">
+            <!-- Kodierung -->
+            <a href="/bereiche/kodierung/index.html" class="portal-card" style="--theme-color: #00ff41;">
+                <h3>💾 Kodierung</h3>
+                <p>Code, Matrix, KI und Technik.</p>
+                <span class="arrow">→</span>
+            </a>
+
+            <!-- Menschenwelt -->
+            <a href="/bereiche/menschenwelt/index.html" class="portal-card" style="--theme-color: #ffb347;">
+                <h3>🌍 Menschenwelt</h3>
+                <p>Gesellschaft, Psychologie und Systemkritik.</p>
+                <span class="arrow">→</span>
+            </a>
+
+            <!-- Spielerei -->
+            <a href="/bereiche/spielerei/index.html" class="portal-card" style="--theme-color: #d600ff;">
                 <h3>🎮 Spielerei</h3>
-                <p>Retro-Setups, Gaming als Kunst, Spiel und Ernst. Von Pixeln bis Philosophie.</p>
-                <span class="tag-preview">#retrokram #gaming #spielundkunst</span>
-            </a>
-
-            <a href="bereiche/kodierung/" class="bereich-card bereich-kodierung">
-                <h3>💻 Kodierung</h3>
-                <p>Vibe-Coding, KI-Workflows, GitHub-Experimente. Code als Denken.</p>
-                <span class="tag-preview">#vibecoding #ki #github #workflow</span>
-            </a>
-
-            <a href="bereiche/geistesblitze/" class="bereich-card bereich-geistesblitze">
-                <h3>💡 Geistesblitze</h3>
-                <p>Halbfertige Projekte, Gedankenexperimente, Ideen mit Potential.</p>
-                <span class="tag-preview">#ideen #konzepte #brainstorm</span>
-            </a>
-
-            <a href="bereiche/menschenwelt/" class="bereich-card bereich-menschenwelt">
-                <h3>⚡ Menschenwelt</h3>
-                <p>Lobbyismus, Systemdenken, strukturelle Gewalt. Das Unbequeme.</p>
-                <span class="tag-preview">#lobbyismus #systemkritik #macht</span>
+                <p>Retro, Games und Kunst.</p>
+                <span class="arrow">→</span>
             </a>
         </div>
     </main>
 
-    <footer class="site-footer">
-        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
-    </footer>
-        <script src="js/theme-toggle.js"></script> <!-- NEU -->
+    <my-footer></my-footer>
+
+    <script src="/js/layout-components.js" defer></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>

@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geistesblitze - Borderless Deviant</title>
-    <link rel="stylesheet" href="../../css/base.css">
-    <link rel="stylesheet" href="../../css/layout.css">
+    <title>borderless deviant - Geistesblitze</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            // Holt Einstellung oder nimmt 'dark' als Standard
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="css/theme-geistesblitze.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body class="theme-geistesblitze">
-    <header class="site-header">
-        <h1><a href="../../index.html">Borderless Deviant</a></h1>
-        <p class="bereich-breadcrumb">
-            <a href="../../wilde-reise.html">Wilde Reise</a> → Geistesblitze
-        </p>
-    </header>
-
-    <nav class="main-nav">
-        <a href="../../index.html">Start</a>
-        <a href="../../strom.html">Strom</a>
-        <a href="../../themen.html">Themen</a>
-        <a href="../../wilde-reise.html" class="active">Wilde Reise</a>
-        <a href="../../about.html">About</a>
-    </nav>
+    <my-header></my-header>
+    <my-nav></my-nav>
 
     <main class="container">
         <section class="bereich-intro">
@@ -61,9 +61,7 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
-    </footer>
+    <my-footer></my-footer>
 
     <script src="../../js/posts.js"></script>
     <script src="../../js/x-site-tags.js"></script>
@@ -71,5 +69,8 @@
         loadRelatedPosts(['#ideen', '#konzepte', '#brainstorm'], 'related-blog-posts');
         initCrossSiteTags();
     </script>
+
+    <script src="/js/layout-components.js" defer></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

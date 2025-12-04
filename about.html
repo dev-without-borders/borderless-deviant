@@ -3,74 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Borderless Deviant</title>
-    <link rel="stylesheet" href="/css/themes/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
+    <title>borderless deviant - Zu Mir</title>
+
+    <!-- Anti-White-Flash Script -->
+    <script>
+        (function() {
+            // Holt Einstellung oder nimmt 'dark' als Standard
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/site-about.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1><a href="index.html">Borderless Deviant</a></h1>
-    </header>
+    <my-header></my-header>
+    <my-nav></my-nav>
 
-    <nav class="main-nav">
-        <a href="index.html">Start</a>
-        <a href="strom.html">Strom</a>
-        <a href="themen.html">Themen</a>
-        <a href="about.html" class="active">About</a>
-    </nav>
+    <main class="container text-content">
+        <section class="page-header">
+            <h2>Über mich & das Projekt</h2>
+        </section>
 
-    <main class="container">
-        <article class="about-content">
-            <h2>Über dieses Projekt</h2>
-            
+        <article class="card">            
             <section>
                 <h3>Was ist Borderless Deviant?</h3>
                 <p>
-                    [Platzhalter für deine Beschreibung]
+                    Borderless Deviant ist der bewusste Bruch mit der Nische. Es ist eine digitale Nachdenkstube an der Schnittstelle von Technologie, Gesellschaft und Selbstoptimierung.
                 </p>
                 <p>
-                    Eine digitale Nachdenkstube. Ein Versuch, 700 Notizen aus Obsidian 
-                    strukturiert nach außen zu bringen – ohne den Zwang zum perfekten Post.
+                    Hier treffen FPGA-Hardware auf Lobbymonitoring und ADHS-Deep-Dives auf puristische Web-Architektur. Ein Versuch, über 700 Notizen aus meiner privaten Obsidian-Vault strukturiert nach außen zu bringen – ohne Redaktionsplan und ohne den Zwang zum perfekten Hochglanz-Content.
                 </p>
             </section>
 
             <section>
                 <h3>Warum das Ganze?</h3>
                 <ul>
-                    <li>Strukturierung des eigenen Denkens durch Einordnungszwang</li>
-                    <li>Sichtbarmachen von Verbindungen zwischen Themen</li>
-                    <li>Experimentierfeld für Obsidian-Workflows</li>
-                    <li>Archiv für Gedanken, die sonst verloren gehen</li>
+                    <li><strong>Strukturierung durch Output:</strong> Der Zwang zur Einordnung schärft das eigene Denken.</li>
+                    <li><strong>Connecting the Dots:</strong> Sichtbarmachen von Verbindungen zwischen scheinbar getrennten Themenwelten.</li>
+                    <li><strong>Experimentierfeld:</strong> Ein Spielplatz für Obsidian-Workflows und Web-Technologien "close to the metal".</li>
+                    <li><strong>Archiv:</strong> Ein Persistenz-Layer für Gedanken, die im Feed-Rauschen sonst verloren gehen.</li>
                 </ul>
             </section>
 
             <section>
                 <h3>Wer schreibt hier?</h3>
                 <p>
-                    [Platzhalter für deine Bio]
+                    Ein Entwickler und Analyst, der Systeme verstehen will – egal ob es sich um Legacy-Code, gesellschaftliche Strukturen oder die eigene Neurodiversität handelt. 
                 </p>
-            </section>
-
-            <section>
-                <h3>Tech-Stack</h3>
                 <p>
-                    Bewusst retro: HTML, CSS, JavaScript. Kein Backend. Kein Framework. 
-                    Gehostet auf NeoCities. Content aus Obsidian.
+                    Ich bin Fan von technischer Autonomie und "Reparieren statt Wegwerfen". In diesem Projekt nehme ich die Rolle des Gärtners und Mechanikers gleichzeitig ein: Ich refactore historisch gewachsenes Chaos in funktionierende Strukturen und lasse dabei Neues wachsen.
                 </p>
             </section>
 
             <section>
-                <h3>Kontakt</h3>
-                <p>Email: <a href="mailto:[email protected]">[email protected]</a></p>
+                <h3>Tech-Stack & Philosophie</h3>
+                <p>
+                    Dieses Projekt ist bewusstes "Slow Web". 
+                </p>
+                <ul style="list-style-type: square; margin-left: 20px;">
+                    <li><strong>Frontend:</strong> Vanilla JS, HTML, CSS. Keine Frameworks, kein React-Overhead.</li>
+                    <li><strong>Daten:</strong> JSON-Dateien statt Datenbank.</li>
+                    <li><strong>Workflow:</strong> Geschrieben in Obsidian, gehostet auf NeoCities.</li>
+                </ul>
             </section>
         </article>
     </main>
 
-    <footer class="site-footer">
-        <p>Kontakt: <a href="mailto:[email protected]">[email protected]</a></p>
-    </footer>
-        <script src="js/theme-toggle.js"></script> <!-- NEU -->
+    <my-footer></my-footer>
+
+    <script src="/js/layout-components.js" defer></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
