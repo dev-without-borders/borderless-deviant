@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
    -------------------------------------------------------------------------- */
 async function fetchAllData() {
     try {
-        const [postsRes, pagesRes] = await Promise.all([
+        const [postsRes, pagesRes, themesRes] = await Promise.all([
             fetch('/api/posts.json'),
             fetch('/api/pages.json'),
             fetch('/api/themes.json'),

@@ -327,6 +327,39 @@ button:disabled,
     transform: none;
 }
 
+/* Filter-Buttons für Strom */
+
+.filter-button {
+    padding: var(--space-xs) var(--space-sm);
+    background-color: transparent;
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+    background-color: var(--color-surface);
+    border-color: var(--color-primary);
+}
+
+.filter-button.active {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-color: var(--color-primary);
+    font-weight: 600;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filter-button.active:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+
 /* ============================================
    ALERTS
    ============================================ */

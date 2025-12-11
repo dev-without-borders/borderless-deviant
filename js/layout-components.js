@@ -44,7 +44,13 @@ class MyNav extends HTMLElement {
                 </div>
             </nav>
         `;
-        
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath || 
+                link.getAttribute('href') === currentPath.replace(/\/$/, '')) {
+                    link.classList.add('active');
+            }
+        });
         this.initThemeToggle();
     }
 
